@@ -29,20 +29,22 @@ jobs:
       # Install project dependencies
       - run:
           name: Install local dependencies
-          command: npm install
+          command: |
+              - npm init
+              - npm install
       # Cache local dependencies in CircleCI storage if they don't exist
       - save_cache:
           key: v1-dependencies-{{ checksum "appsettings.json" }}
           paths:
               - node_modules
       # Install project dependencies
-      # - run:
-      #     name: Install local dependencies
-      #     command: 
-      #       npm install
-      #       npm update
-      #       ng update
-      #       ng update--all--force
+      - run:
+          name: Install local dependencies
+          command: 
+            npm install
+            npm update
+            ng update
+            ng update--all--force
       - run:
           name: Build app
           command: |
