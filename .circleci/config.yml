@@ -43,7 +43,7 @@ jobs:
       - save_cache:
           key: dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
           paths:
-              - C:\Users\circleci\.nuget\packages
+              - C:\Users\44777\.circleci\.nuget\packages
       - run:
           name: "Build Application according to some given configuration"
           command: dotnet.exe build --configuration Release
@@ -108,7 +108,7 @@ jobs:
           command: dotnet.exe restore
       - save_cache:
           paths:
-            - C:\Users\circleci\.nuget\packages
+            - C:\Users\44777\.circleci\.nuget\packages
           key: dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
       # Test the source code
       - run:
@@ -121,7 +121,7 @@ jobs:
           name: Run E2E tests
           command: npm run
       - store_artifacts:
-          path: C:\Users\circleci\project\test_coverage
+          path: C:\Users\44777\.circleci\project\test_coverage
 
   build-image: 
     machine: true
