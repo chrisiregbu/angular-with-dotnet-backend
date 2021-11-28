@@ -1,3 +1,5 @@
+set -euo pipefail
+
 # https://hub.docker.com/_/microsoft-dotnet
 FROM mcr.microsoft.com/dotnet/sdk:5.0.103 AS build
 WORKDIR /build
@@ -6,9 +8,9 @@ RUN apk add --no-cache python3=3.8.10-r0
 
 #RUN npm config set legacy-peer-deps true
 
-#RUN npm install 
+#RUN npm install
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x |  sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 #RUN apt-get install -y nodejs
 
 # copy csproj and restore as distinct layers
