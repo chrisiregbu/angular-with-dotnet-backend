@@ -23,7 +23,7 @@ jobs:
       # Restore local dependencies (node_modules) from the CircleCI cache if it exists
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "appsettings.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       # Install project dependencies
@@ -32,7 +32,7 @@ jobs:
           command: npm install
       # Cache local dependencies in CircleCI storage if they don't exist
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "appsettings.json" }}
           paths:
               - node_modules
       # Install project dependencies
@@ -172,15 +172,15 @@ workflows:
             requires: [lint-app, build-app]
         - test-app:
             requires: [build-app]
-        - build-image:
-            requires: [test-app, lint-app, lint-docker]
-            filters:
-              branches:
-                only: [master]
+        # - build-image:
+        #     requires: [test-app, lint-app, lint-docker]
+        #     filters:
+        #       branches:
+        #         only: [master]
         # The deploy job will only run on the filtered branches and require the build job to be successful before it starts
-        - deploy-app:
-            requires: [build-image]
-            filters:
-              branches:
-                only:
-                  - master
+        # - deploy-app:
+        #     requires: [build-image]
+        #     filters:
+        #       branches:
+        #         only:
+        #           - master
