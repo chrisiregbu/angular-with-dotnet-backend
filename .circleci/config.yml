@@ -4,12 +4,12 @@ orbs:
   slack: circleci/slack@4.2.0
   aws-cli: circleci/aws-cli@2.0.3 
   aws-eks: circleci/aws-eks@0.2.3
+  windows: circleci/windows@2.2.0
 
 jobs:
   build-app:
     executor:
-      name: windows/default
-    
+        name: windows/default
     # The current directory will be the place where all the steps will run
     working_directory: ~/project
 
@@ -37,10 +37,8 @@ jobs:
               - node_modules
       # Install project dependencies
       - run:
-          name: Install local dependencies
-          command: |
-            npm ci
-            npm update
+          name: Install project dependencies
+          command: dotnet.exe restore
       - run:
           name: Build app
           command: dotnet.exe build --configuration Release
