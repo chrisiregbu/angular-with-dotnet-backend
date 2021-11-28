@@ -41,8 +41,8 @@ jobs:
           command: |
             npm ci
             npm update
-            ng update
-            ng update--all--force
+            #ng update
+            #ng update--all--force
       - run:
           name: Build app
           command: |
