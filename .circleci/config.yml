@@ -44,6 +44,7 @@ jobs:
       - run:
           name: Build app
           command: |
+            npm ci
             sudo npm i
             npm run build
 
