@@ -39,6 +39,7 @@ jobs:
       - run:
           name: Install local dependencies
           command: 
+            npm install
             npm update
             ng update
             ng update--all--force
