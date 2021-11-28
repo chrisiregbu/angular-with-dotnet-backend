@@ -36,13 +36,13 @@ jobs:
           paths:
               - node_modules
       # Install project dependencies
-      - run:
-          name: Install local dependencies
-          command: 
-            npm install
-            npm update
-            ng update
-            ng update--all--force
+      # - run:
+      #     name: Install local dependencies
+      #     command: 
+      #       npm install
+      #       npm update
+      #       ng update
+      #       ng update--all--force
       - run:
           name: Build app
           command: |
