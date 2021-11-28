@@ -115,8 +115,8 @@ jobs:
           name: Run Application Tests
           command: |
               dotnet.exe test -v n --results-directory:test_coverage --collect:"Code Coverage"
-              sudo npm install -g karma-cli
-              npm run test --code-coverage
+              #sudo npm install -g karma-cli
+              #npm run test --code-coverage
       - run:
           name: Run E2E tests
           command: npm run
