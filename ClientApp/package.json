@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build": "ng build",
     "build:ssr": "ng run angular-with-dotnet-backend:server:dev",
     "test": "ng test",
     "lint": "ng lint",
