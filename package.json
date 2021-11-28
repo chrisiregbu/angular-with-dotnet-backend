@@ -4,7 +4,15 @@
   "description": "Example Project on how to run Angular app with dotnet as a backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ng test",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build-prod": "node --version",
+    "build-dev": "node --version",
+    "build-qa": "node --version"
   },
   "repository": {
     "type": "git",
