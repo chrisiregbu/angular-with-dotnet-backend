@@ -38,8 +38,7 @@ jobs:
       # Install project dependencies
       - run:
           name: Install local dependencies
-          command: 
-            npm install
+          command: |
             npm update
             ng update
             ng update--all--force
