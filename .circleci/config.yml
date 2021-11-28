@@ -113,16 +113,15 @@ jobs:
       # Test the source code
       - run:
           name: Run Application Tests
-          command: dotnet.exe test -v n --results-directory:test_coverage --collect:"Code Coverage"
-            #sudo npm install -g karma-cli
-            #npm run test --code-coverage
+          command: |
+              dotnet.exe test -v n --results-directory:test_coverage --collect:"Code Coverage"
+              sudo npm install -g karma-cli
+              npm run test --code-coverage
       - run:
-          name: "Print Working Directory"
-          command: pwd
+          name: Run E2E tests
+          command: npm run
       - store_artifacts:
           path: C:\Users\circleci\project\test_coverage
-          #name: Run E2E tests
-          #command: npm run
 
   build-image: 
     machine: true
