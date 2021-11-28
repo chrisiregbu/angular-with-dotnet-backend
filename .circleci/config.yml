@@ -29,9 +29,7 @@ jobs:
       # Install project dependencies
       - run:
           name: Install local dependencies
-          command: |
-              - npm init
-              - npm install
+          command: npm install
       # Cache local dependencies in CircleCI storage if they don't exist
       - save_cache:
           key: v1-dependencies-{{ checksum "appsettings.json" }}
