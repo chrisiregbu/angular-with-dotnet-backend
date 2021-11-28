@@ -23,7 +23,7 @@ jobs:
       # Restore local dependencies (node_modules) from the CircleCI cache if it exists
       - restore_cache:
           keys:
-          - dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend/angular-with-dotnet-backend.csproj" }}
+          - dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       # Install project dependencies
@@ -32,7 +32,7 @@ jobs:
           command: npm install
       # Cache local dependencies in CircleCI storage if they don't exist
       - save_cache:
-          key: dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend/angular-with-dotnet-backend.csproj" }}
+          key: dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
           paths:
               - node_modules
       # Install project dependencies
