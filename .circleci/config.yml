@@ -8,6 +8,7 @@ orbs:
 
 jobs:
   build-app:
+    description: Build application with Release configuration
     executor:
         name: windows/default
     # The current directory will be the place where all the steps will run
@@ -23,9 +24,9 @@ jobs:
       # Restore local dependencies (node_modules) from the CircleCI cache if it exists
       - restore_cache:
           keys:
-          - dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
       # Install project dependencies
       - run:
           name: Install local dependencies
@@ -39,8 +40,12 @@ jobs:
       - run:
           name: Install project dependencies
           command: dotnet.exe restore
+      - save_cache:
+          key: dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
+          paths:
+              - C:\Users\circleci\.nuget\packages
       - run:
-          name: Build app
+          name: "Build Application according to some given configuration"
           command: dotnet.exe build --configuration Release
 
   # Lint the frontend source code
@@ -88,21 +93,36 @@ jobs:
           command: npm install
 
   test-app:
-    docker:
-      - image: circleci/node:16.13.0
+    description: Setup and run application tests
+    executor:
+      name: windows/default
+    # docker:
+    #   - image: circleci/node:16.13.0
     steps:
       - checkout
       - restore_cache:
-          key: frontend-build
+          keys: 
+            - dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
+      - run:
+          name: "Install project dependencies"
+          command: dotnet.exe restore
+      - save_cache:
+          paths:
+            - C:\Users\circleci\.nuget\packages
+          key: dotnet-packages-v1-{{ checksum "angular-with-dotnet-backend.csproj" }}
       # Test the source code
       - run:
-          name: Test frontend source code
-          command: 
-            sudo npm install -g karma-cli
-            npm run test --code-coverage
+          name: Run Application Tests
+          command: dotnet.exe test -v n --results-directory:test_coverage --collect:"Code Coverage"
+            #sudo npm install -g karma-cli
+            #npm run test --code-coverage
       - run:
-          name: Run E2E tests
-          command: npm run
+          name: "Print Working Directory"
+          command: pwd
+      - store_artifacts:
+          path: C:\Users\circleci\project\test_coverage
+          #name: Run E2E tests
+          #command: npm run
 
   build-image: 
     machine: true
