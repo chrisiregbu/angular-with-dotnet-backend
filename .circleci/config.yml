@@ -7,8 +7,8 @@ orbs:
 
 jobs:
   build-app:
-    docker:
-      - image: circleci/node:16.13.0
+    executor:
+      name: windows/default
     
     # The current directory will be the place where all the steps will run
     working_directory: ~/project
