@@ -1,4 +1,4 @@
-namespace angular_with_dotnet_backend.Models
+namespace angular_dotnet_example.Models
 {
     public class UserModel
     {

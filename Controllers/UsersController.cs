@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace angularwithdotnetbackend.Controllers
+namespace angular_dotnet_example.Controllers
 {
     [ApiController]
     public class UsersController : ControllerBase
