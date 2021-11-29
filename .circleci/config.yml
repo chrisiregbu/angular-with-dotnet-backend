@@ -46,7 +46,10 @@ jobs:
               - C:\Users\44777\.circleci\.nuget\packages
       - run:
           name: "Build Application according to some given configuration"
-          command: dotnet.exe build --configuration Release
+          command: 
+            dotnet.exe build --configuration Release
+            sudo npm i
+            npm run build
 
   # Lint the frontend source code
   lint-app:
