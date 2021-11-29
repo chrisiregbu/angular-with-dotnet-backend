@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/chrisiregbu/angular-with-dotnet-backend/tree/master.svg?style=svg)](https://circleci.com/gh/chrisiregbu/angular-with-dotnet-backend/tree/master)
+[![CircleCI](https://circleci.com/gh/chrisiregbu/angular_with_dotnet_backend/tree/master.svg?style=svg)](https://circleci.com/gh/chrisiregbu/angular_with_dotnet_backend/tree/master)
 
-# angular-with-dotnet-backend
+# angular_with_dotnet_backend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 

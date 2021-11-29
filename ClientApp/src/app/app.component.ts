@@ -13,7 +13,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private appService: AppService) {}
 
-  title = 'angular-with-dotnet-backend';
+  title = 'angular_with_dotnet_backend';
 
   userForm = new FormGroup({
     firstName: new FormControl('', Validators.nullValidator && Validators.required),

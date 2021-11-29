@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-with-dotnet-backend": {
+    "angular_with_dotnet_backend": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -151,7 +151,7 @@
         }
       }
     },
-    "angular-with-dotnet-backend-e2e": {
+    "angular_with_dotnet_backend-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
