@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace angular_dotnet_example
+namespace angular_with_dotnet_backend
 {
     public class Program
     {
