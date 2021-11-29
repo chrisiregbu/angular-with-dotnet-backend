@@ -24,4 +24,4 @@ RUN dotnet publish -c release -o published --no-cache
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 COPY --from=build /build/published ./
-ENTRYPOINT ["dotnet", "angular-with-dotnet-backend.dll"]
+ENTRYPOINT ["dotnet", "angular_with_dotnet_backend.dll"]

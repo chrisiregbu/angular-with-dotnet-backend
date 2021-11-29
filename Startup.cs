@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace angular_dotnet_example
+namespace angular_with_dotnet_backend
 {
     public class Startup
     {
