@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace angular_dotnet_example.Models
+namespace angular-with-dotnet-backend.Models
 {
     public class UserRepository: IUserRepository
     {
