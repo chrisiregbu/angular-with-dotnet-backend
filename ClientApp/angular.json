@@ -84,24 +84,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-with-dotnet-backend:build"
+            "browserTarget": "angular_with_dotnet_backend:build"
           },
           "configurations": {
             "test": {
-              "browserTarget": "angular-with-dotnet-backend:build:test"
+              "browserTarget": "angular_with_dotnet_backend:build:test"
             },
             "development": {
-              "browserTarget": "angular-with-dotnet-backend:build:development"
+              "browserTarget": "angular_with_dotnet_backend:build:development"
             },
             "production": {
-              "browserTarget": "angular-with-dotnet-backend:build:production"
+              "browserTarget": "angular_with_dotnet_backend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-with-dotnet-backend:build"
+            "browserTarget": "angular_with_dotnet_backend:build"
           }
         },
         "test": {
@@ -159,7 +159,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-with-dotnet-backend:serve"
+            "devServerTarget": "angular_with_dotnet_backend:serve"
           }
         },
         "lint": {
@@ -172,5 +172,5 @@
       }
     }
   },
-  "defaultProject": "angular-with-dotnet-backend"
+  "defaultProject": "angular_with_dotnet_backend"
 }

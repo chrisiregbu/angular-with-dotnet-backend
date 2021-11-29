@@ -1,11 +1,11 @@
 {
-  "name": "angular-with-dotnet-backend",
+  "name": "angular_with_dotnet_backend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run angular-with-dotnet-backend:server:dev",
+    "build:ssr": "ng run angular_with_dotnet_backend:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

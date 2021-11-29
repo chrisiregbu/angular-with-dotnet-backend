@@ -1,5 +1,5 @@
 {
-  "name": "angular-with-dotnet-backend",
+  "name": "angular_with_dotnet_backend",
   "version": "1.0.0",
   "description": "Example Project on how to run Angular app with dotnet as a backend",
   "main": "index.js",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrisiregbu/angular-with-dotnet-backend.git"
+    "url": "git+https://github.com/chrisiregbu/angular_with_dotnet_backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chrisiregbu/angular-with-dotnet-backend/issues"
+    "url": "https://github.com/chrisiregbu/angular_with_dotnet_backend/issues"
   },
-  "homepage": "https://github.com/chrisiregbu/angular-with-dotnet-backend#readme"
+  "homepage": "https://github.com/chrisiregbu/angular_with_dotnet_backend#readme"
 }
